@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+
+.calculatorContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.design {
+    padding-top: 40px;
+}
+
+.calculator {
+    display: grid;
+    width: 420px;
+    height: 500px;
+    grid-template-areas:
+    "formula formula formula formula"
+    "answer answer answer answer"
+    "ac ac divide multiply"
+    "seven eight nine minus"
+    "four five six plu"
+    "one two three equal"
+    "zero zero decimal-point equal";
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.formula, .answer {
+    width: 400px;
+    margin-bottom: -40px;
+    word-wrap: break-word;
+    padding: 2px 10px;
+    max-height: 100px;
+}
+
+.formula {
+    grid-area: formula;
+    text-align: left;
+}
+
+.answer {
+    grid-area: answer;
+    text-align: right;
+}
+
+button {
+    border-radius: 0;
+    border: 1px solid black;
+    outline: none;
+}
+
+button:hover {
+    border: 1px solid white;
+}
+
+.ac {
+    grid-area: ac;
+    background-color: #cd0a0a;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.equal {
+    grid-area: equal;
+}
+
+.divide, 
+.multiply, 
+.plus, 
+.minus, 
+.equal, 
+.decimal-point {
+    font-size: 30px;
+}
+
+.divide, .multiply, .plus, .minus {
+    background-color: #fa7d09;
+}
+
+.equal {
+    background-color: #27496d;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.decimal-point {
+    background-color: #dbdbdb;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+      width: 370px;
+      height: 450px;
+    }
+    .formula, .answer {
+      width: 350px;
+    }
+  }
